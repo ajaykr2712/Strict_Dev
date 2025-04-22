@@ -47,7 +47,7 @@ System design mastery is a marathon, not a sprint. Let’s grow together, one po
 
 ## 📬 Connect
 - [https://x.com/robstern007]
-- [in/ajay-kumar-pondugala-3b3b711b8]
+- [https://www.linkedin.com/in/ajay-kumar-pondugala-3b3b711b8/]
 
 ---
 
