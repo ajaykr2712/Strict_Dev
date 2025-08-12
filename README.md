@@ -20,14 +20,28 @@ To create a structured learning path for system design mastery through:
 
 ```
 Strict_Dev/
-├── SD/
-│   ├── Topics/           # System design concepts & explanations
-│   ├── Patterns/         # Design patterns & architectural patterns
-│   ├── Scripts/          # Practical implementations & utilities
-│   └── Examples/         # Real-world case studies
-├── docs/                 # Additional documentation
-├── resources/            # Cheat sheets, diagrams, references
-└── exercises/            # Practice problems & solutions
+├── SD/                          # System Design Core
+│   ├── Topics/                  # 50+ system design concepts
+│   ├── Patterns/                # Architectural patterns & implementations
+│   ├── Scripts/                 # Practical demonstrations & tools
+│   ├── Examples/                # Real-world case studies (Netflix, Uber)
+│   ├── Architecture/            # Advanced architectural patterns
+│   ├── Infrastructure/          # Kubernetes, cloud-native patterns
+│   ├── Performance/             # Optimization strategies
+│   ├── Security/                # Security architecture patterns
+│   └── Advanced/                # Event Sourcing, CQRS, Consensus algorithms
+├── Interview_Prep/              # Complete interview preparation
+│   ├── Java_DSA/               # Core Java, Data Structures, Algorithms
+│   ├── Cloud_Services/         # AWS services and cloud architecture
+│   ├── SpringBoot/             # Spring Boot fundamentals and deployment
+│   └── Coding_Challenges/      # 30+ problems (Easy, Medium, Hard)
+├── Assessment/                  # Interactive learning & assessment
+│   ├── Interactive_Challenges/  # Progressive difficulty challenges
+│   └── Progress_Tracking/       # Self-assessment and skill evaluation
+├── Tools/                       # Production-ready utilities
+│   └── system_design_toolkit.py # Consistent hashing, rate limiting, etc.
+├── docs/                        # Learning paths & interview guides
+└── resources/                   # Cheat sheets, diagrams, references
 ```
 
 ## 🚀 Getting Started
@@ -53,16 +67,24 @@ Strict_Dev/
 - **Security**: Authentication, authorization, encryption
 
 ### 🔧 Practical Implementations
-- Working code examples in multiple languages
-- Performance testing scripts
-- Configuration templates
-- Monitoring and observability tools
+- Working code examples in Python and Java
+- Advanced pattern simulators (Event Sourcing, CQRS, Saga)
+- Performance testing and monitoring scripts
+- Production-ready system design tools
+- Distributed algorithms implementations
 
 ### 🎓 Interview Preparation
-- Common system design questions
-- Step-by-step solution approaches
-- Trade-off analysis frameworks
-- Best practices and anti-patterns
+- Complete Java Full-Stack Developer preparation guide
+- Progressive coding challenges (Easy → Medium → Hard)
+- System design interview frameworks
+- Real-world scenario assessments
+- Peer review and collaboration tools
+
+### 🚀 Advanced Learning
+- **Event Sourcing & CQRS**: Complete audit trails and optimized read/write models
+- **Distributed Consensus**: Raft and PBFT algorithm implementations
+- **Interactive Assessments**: Self-paced learning with progress tracking
+- **Practical Tools**: Consistent hashing, circuit breakers, rate limiters
 
 ## 🤝 Contributing
 
@@ -78,14 +100,27 @@ Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
 
 Track your progress through our structured learning modules:
 
-- [ ] **Fundamentals** (Client-Server, DNS, HTTP/HTTPS)
-- [ ] **Data Layer** (Databases, Caching, Storage)
-- [ ] **Scalability** (Load Balancing, Horizontal/Vertical Scaling)
-- [ ] **Reliability** (Replication, Backup, Disaster Recovery)
-- [ ] **Performance** (CDN, Indexing, Optimization)
-- [ ] **Communication** (APIs, Message Queues, WebSockets)
-- [ ] **Security** (Authentication, Encryption, Rate Limiting)
-- [ ] **Advanced Topics** (Microservices, Event Sourcing, CQRS)
+### System Design Mastery Track
+- [ ] **Fundamentals** (Client-Server, DNS, HTTP/HTTPS) → [Topics/](SD/Topics/)
+- [ ] **Data Layer** (Databases, Caching, Storage) → [Performance/](SD/Performance/)
+- [ ] **Scalability** (Load Balancing, Horizontal/Vertical Scaling) → [Scripts/](SD/Scripts/)
+- [ ] **Reliability** (Replication, Backup, Disaster Recovery) → [Patterns/](SD/Patterns/)
+- [ ] **Performance** (CDN, Indexing, Optimization) → [Performance/](SD/Performance/)
+- [ ] **Communication** (APIs, Message Queues, WebSockets) → [Topics/](SD/Topics/)
+- [ ] **Security** (Authentication, Encryption, Rate Limiting) → [Security/](SD/Security/)
+- [ ] **Advanced Topics** (Event Sourcing, CQRS, Consensus) → [Advanced/](SD/Advanced/)
+
+### Interview Preparation Track
+- [ ] **Java Core & DSA** (50+ problems solved) → [Interview_Prep/Java_DSA/](Interview_Prep/Java_DSA/)
+- [ ] **Spring Boot Mastery** (Architecture, Deployment) → [Interview_Prep/SpringBoot/](Interview_Prep/SpringBoot/)
+- [ ] **Cloud Services** (AWS, Architecture patterns) → [Interview_Prep/Cloud_Services/](Interview_Prep/Cloud_Services/)
+- [ ] **Coding Challenges** (Easy → Medium → Hard) → [Interview_Prep/Coding_Challenges/](Interview_Prep/Coding_Challenges/)
+
+### Hands-on Implementation Track
+- [ ] **Basic Tools** (Rate limiter, Load balancer) → [Tools/](Tools/)
+- [ ] **Advanced Patterns** (Event sourcing, CQRS) → [Advanced/](SD/Advanced/)
+- [ ] **Assessment Challenges** (Progressive difficulty) → [Assessment/](Assessment/)
+- [ ] **Real-world Projects** (End-to-end implementations)
 
 ## 🔗 Connect & Learn Together
 
