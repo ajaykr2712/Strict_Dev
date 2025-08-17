@@ -126,6 +126,44 @@
 - Forensic capabilities
 - Recovery procedures
 
+## AI and LLM Security Patterns
+
+### AI Model Security
+- Model validation and verification
+- Adversarial attack protection
+- Model poisoning prevention
+- Secure model serving and versioning
+
+### LLM-Specific Security
+- Prompt injection prevention
+- Output filtering and validation
+- Context window management
+- Conversation state security
+
+### AI Data Privacy
+- Differential privacy implementation
+- Federated learning security
+- Data anonymization for AI training
+- PII detection and protection in AI outputs
+
+### AI System Monitoring
+- Model drift detection
+- Bias monitoring and mitigation
+- Performance anomaly detection
+- Security event correlation with AI insights
+
+### Chatbot and AI Assistant Security
+- User authentication and authorization
+- Session management for conversations
+- Content moderation with AI
+- Multi-modal input validation (text, image, audio)
+
+### AI Infrastructure Security
+- Secure model deployment pipelines
+- Container security for AI workloads
+- API security for AI services
+- Secrets management for AI models
+
 ## Compliance and Privacy
 
 ### GDPR Compliance
