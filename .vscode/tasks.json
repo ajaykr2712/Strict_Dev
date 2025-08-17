@@ -1,0 +1,15 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Run AI Assistant Example",
+			"type": "shell",
+			"command": "cd /Users/aponduga/Desktop/Personal/Strict_Dev/Security_Patterns && javac AIAssistantArchitectureExample.java && java AIAssistantArchitectureExample",
+			"group": "build",
+			"isBackground": false,
+			"problemMatcher": [
+				"$javac"
+			]
+		}
+	]
+}
