@@ -1,11 +1,9 @@
 package com.systemdesign.monitoring;
 
+import java.time.Duration;
 import java.util.*;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicLong;
-import java.util.concurrent.atomic.AtomicReference;
-import java.time.Instant;
-import java.time.Duration;
 
 /**
  * Advanced Monitoring and Observability System
