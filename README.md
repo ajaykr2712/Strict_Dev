@@ -6,45 +6,103 @@
 
 > **"Excellence in system design comes from deliberate practice and continuous learning"**
 
-Welcome to **Strict Dev** - your comprehensive resource for mastering system design concepts, patterns, and implementation strategies. This repository is designed for software engineers, architects, and students who want to build robust, scalable, and maintainable systems.
+Welcome to **Strict Dev** - your comprehensive resource for mastering system design concepts, patterns, and implementation strategies. This repository is designed for software engineers, architects, and students who want to build robust, scalable, and maintainable systems with **advanced AI and LLM integration capabilities**.
 
 ## 🎯 Mission
 
 To create a structured learning path for system design mastery through:
-- **Daily topic exploration** with real-world examples
-- **Practical implementation patterns** and code samples
-- **Interview preparation** resources
-- **Hands-on scripts** for testing concepts
+- **Daily topic exploration** with real-world examples (Netflix, Uber, WhatsApp)
+- **Practical implementation patterns** with working Java code
+- **AI/LLM integration patterns** for modern chatbots and assistants
+- **Security-first approach** with comprehensive security patterns
+- **Interview preparation** resources and hands-on challenges
+- **Complete framework mapping** showing file interconnections
+
+## 🗺️ **Framework Overview**
+
+📋 **[COMPREHENSIVE_FRAMEWORK_MAPPING.md](COMPREHENSIVE_FRAMEWORK_MAPPING.md)** - Complete guide to how all files interconnect to form a unified learning framework
 
 ## 📚 Repository Structure
 
 ```
 Strict_Dev/
-├── SD/                          # System Design Core
-│   ├── Topics/                  # 50+ system design concepts
-│   ├── Patterns/                # Architectural patterns & implementations
-│   ├── Scripts/                 # Practical demonstrations & tools
-│   ├── Examples/                # Real-world case studies (Netflix, Uber)
-│   ├── Architecture/            # Advanced architectural patterns
-│   ├── Infrastructure/          # Kubernetes, cloud-native patterns
-│   ├── Performance/             # Optimization strategies
-│   ├── Security/                # Security architecture patterns
-│   └── Advanced/                # Event Sourcing, CQRS, Consensus algorithms
-├── Interview_Prep/              # Complete interview preparation
-│   ├── Java_DSA/               # Core Java, Data Structures, Algorithms
-│   ├── Cloud_Services/         # AWS services and cloud architecture
-│   ├── SpringBoot/             # Spring Boot fundamentals and deployment
-│   └── Coding_Challenges/      # 30+ problems (Easy, Medium, Hard)
-├── Assessment/                  # Interactive learning & assessment
-│   ├── Interactive_Challenges/  # Progressive difficulty challenges
-│   └── Progress_Tracking/       # Self-assessment and skill evaluation
-├── Tools/                       # Production-ready utilities
-│   └── system_design_toolkit.py # Consistent hashing, rate limiting, etc.
-├── docs/                        # Learning paths & interview guides
-└── resources/                   # Cheat sheets, diagrams, references
+├── 🏛️ CORE DESIGN PATTERNS
+│   ├── SingletonExample.java           # Thread-safe singleton implementations
+│   ├── FactoryExample.java             # Service and command factories
+│   ├── ObserverExample.java            # Event-driven system foundation
+│   ├── StrategyExample.java            # Algorithm selection patterns
+│   ├── StateExample.java               # State management (conversations, messages)
+│   ├── ChainOfResponsibilityExample.java # Request processing pipelines
+│   ├── CircuitBreakerExample.java      # Service resilience patterns
+│   └── Advanced_Patterns/              # Builder, Command, Decorator, etc.
+│
+├── 🔒 SECURITY & AI INTEGRATION
+│   ├── Security_Patterns/
+│   │   ├── Security_Best_Practices.md           # Core + AI security patterns
+│   │   ├── AI_LLM_Integration_Patterns.md       # Comprehensive AI integration
+│   │   ├── AI_Chatbot_Implementation_Guide.md   # Strategic implementation guide
+│   │   └── AIAssistantArchitectureExample.java  # Working AI assistant code
+│   └── Advanced authentication, rate limiting, monitoring patterns
+│
+├── 🏗️ SYSTEM ARCHITECTURE
+│   ├── SD/
+│   │   ├── Architecture/               # Microservices, Event-driven, CQRS
+│   │   ├── Patterns/                   # Circuit breaker, Saga, Event sourcing
+│   │   ├── Topics/                     # 50+ system design concepts
+│   │   └── Scripts/                    # Testing and simulation tools
+│   ├── Microservices_Patterns/         # Core and communication patterns
+│   ├── Database_Patterns/              # Design patterns + advanced patterns
+│   └── API_Design/                     # REST, GraphQL, advanced patterns
+│
+├── ⚡ PERFORMANCE & SCALABILITY
+│   ├── Performance_Optimization/       # Caching, load balancing strategies
+│   ├── Real_Time_Systems/              # Event streaming, real-time architecture
+│   ├── Distributed_Systems/            # Consensus algorithms, coordination
+│   └── Container_Orchestration/        # Kubernetes patterns
+│
+├── 🎓 LEARNING & ASSESSMENT
+│   ├── docs/
+│   │   ├── learning-path.md            # Structured 20-week learning path
+│   │   └── interview-guide.md          # Comprehensive interview preparation
+│   ├── Interview_Prep/                 # Java DSA, SpringBoot, Cloud Services
+│   │   ├── Coding_Challenges/          # Easy, Medium, Hard problems
+│   │   └── Cloud_Services/             # AWS, cloud architecture
+│   ├── Assessment/                     # Interactive challenges and progress tracking
+│   └── Design_Patterns_Implementation_Summary.md # Complete pattern overview
+│
+└── 🛠️ TOOLS & UTILITIES
+    ├── Tools/system_design_toolkit.py  # Production-ready utilities
+    └── Monitoring_Systems/             # Advanced monitoring implementations
 ```
 
 ## 🚀 Getting Started
+
+### Quick Start Paths
+
+#### 🆕 **For Beginners**
+1. Start with [`docs/learning-path.md`](docs/learning-path.md) - Module 1
+2. Study basic patterns: `SingletonExample.java`, `FactoryExample.java`
+3. Review [`Design_Patterns_Implementation_Summary.md`](Design_Patterns_Implementation_Summary.md)
+
+#### 👨‍💻 **For Developers**
+1. Explore Java implementations in root directory
+2. Study [`Advanced_Patterns/`](Advanced_Patterns/) for complex scenarios
+3. Implement microservices patterns from [`Microservices_Patterns/`](Microservices_Patterns/)
+
+#### 🏛️ **For Architects**
+1. Review [`SD/Architecture/`](SD/Architecture/) for system architecture patterns
+2. Study [`Database_Patterns/Advanced_Database_Patterns.md`](Database_Patterns/Advanced_Database_Patterns.md)
+3. Explore performance optimization strategies
+
+#### 🤖 **For AI Engineers**
+1. **Start here:** [`Security_Patterns/AI_LLM_Integration_Patterns.md`](Security_Patterns/AI_LLM_Integration_Patterns.md)
+2. Study [`Security_Patterns/AIAssistantArchitectureExample.java`](Security_Patterns/AIAssistantArchitectureExample.java)
+3. Review [`Security_Patterns/AI_Chatbot_Implementation_Guide.md`](Security_Patterns/AI_Chatbot_Implementation_Guide.md)
+
+#### 💼 **For Interview Prep**
+1. Follow [`docs/interview-guide.md`](docs/interview-guide.md)
+2. Practice with [`Interview_Prep/Coding_Challenges/`](Interview_Prep/Coding_Challenges/)
+3. Test with [`Assessment/Interactive_Challenges.md`](Assessment/Interactive_Challenges.md)
 
 ### Prerequisites
 - Basic understanding of programming concepts
