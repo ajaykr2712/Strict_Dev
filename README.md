@@ -110,84 +110,60 @@ Strict_Dev/
 - Curiosity and passion for learning!
 
 ### Learning Path
-1. **Foundation**: Start with [Topics/README.md](SD/Topics/README.md)
-2. **Practice**: Explore scripts in [Scripts/](SD/Scripts/)
-3. **Apply**: Study patterns in [Patterns/](SD/Patterns/)
-4. **Master**: Build projects using learned concepts
+1. **Foundation**: Start with [`docs/learning-path.md`](docs/learning-path.md) - Structured 20-week progression
+2. **Patterns**: Master design patterns through Java implementations
+3. **Architecture**: Study system architecture and microservices patterns
+4. **AI Integration**: Learn modern AI/LLM integration patterns
+5. **Assessment**: Validate knowledge through challenges and projects
 
 ## 🛠️ Key Features
 
 ### 📖 Comprehensive Topics Coverage
-- **Core Concepts**: Scalability, reliability, consistency
-- **System Components**: Load balancers, databases, caches
-- **Communication**: APIs, message queues, event-driven architecture
-- **Data Management**: Sharding, replication, partitioning
-- **Security**: Authentication, authorization, encryption
+- **Core Concepts**: Scalability, reliability, consistency, performance
+- **Design Patterns**: 15+ patterns with working Java implementations
+- **System Architecture**: Microservices, event-driven, CQRS, hexagonal architecture
+- **AI Integration**: Secure chatbots, LLM patterns, AI system architecture
+- **Security**: Authentication, authorization, encryption, AI-specific security
+- **Database Patterns**: Sharding, replication, event sourcing, polyglot persistence
+- **Communication**: APIs, message queues, event-driven architecture, real-time systems
 
 ### 🔧 Practical Implementations
-- Working code examples in Python and Java
-- Advanced pattern simulators (Event Sourcing, CQRS, Saga)
-- Performance testing and monitoring scripts
-- Production-ready system design tools
-- Distributed algorithms implementations
+- **Working Code Examples**: Java implementations for every pattern
+- **AI Assistant Example**: Complete secure AI chatbot implementation
+- **Advanced Pattern Simulators**: Event Sourcing, CQRS, Saga patterns
+- **Performance Testing**: Monitoring scripts and optimization tools
+- **Production-Ready Tools**: System design utilities and testing frameworks
+- **Distributed Algorithms**: Consensus algorithms and coordination patterns
 
-### 🎓 Interview Preparation
-- Complete Java Full-Stack Developer preparation guide
-- Progressive coding challenges (Easy → Medium → Hard)
-- System design interview frameworks
-- Real-world scenario assessments
-- Peer review and collaboration tools
-
-### 🚀 Advanced Learning
-- **Event Sourcing & CQRS**: Complete audit trails and optimized read/write models
-- **Distributed Consensus**: Raft and PBFT algorithm implementations
+### 🎓 Structured Learning Framework
+- **Progressive Learning Path**: 20-week structured curriculum
+- **Interview Preparation**: Complete system design interview guide
+- **Coding Challenges**: Easy → Medium → Hard progression
+- **Real-World Case Studies**: Netflix, Uber, WhatsApp architectures
 - **Interactive Assessments**: Self-paced learning with progress tracking
-- **Practical Tools**: Consistent hashing, circuit breakers, rate limiters
+- **Framework Mapping**: Clear interconnections between all topics
 
-## 🤝 Contributing
+### 🚀 Advanced Features
+- **AI/LLM Integration**: Modern chatbot and AI assistant patterns
+- **Security-First Approach**: Comprehensive security patterns including AI security
+- **Event Sourcing & CQRS**: Complete audit trails and optimized read/write models
+- **Distributed Systems**: Consensus algorithms, coordination patterns
+- **Performance Optimization**: Caching strategies, load balancing, monitoring
+- **Container Orchestration**: Kubernetes patterns and cloud-native architecture
 
-We welcome contributions! Whether you're:
-- Adding new topics or improving existing ones
-- Sharing real-world experiences
-- Fixing bugs or typos
-- Suggesting new features
+## 🔗 File Interconnections
 
-Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
+This repository is designed as an interconnected learning framework. Key relationships:
 
-## 📊 Learning Progress
+- **Design Patterns** → Applied in **System Architecture** → Enhanced with **AI Integration**
+- **Security Patterns** → Applied across all implementations
+- **Database Patterns** → Support **Microservices** and **AI Systems**
+- **Performance Patterns** → Applied to all architectural components
+- **Learning Path** → Guides through all components systematically
 
-Track your progress through our structured learning modules:
+📋 **See [COMPREHENSIVE_FRAMEWORK_MAPPING.md](COMPREHENSIVE_FRAMEWORK_MAPPING.md) for detailed file interconnections and learning progression.**
 
-### System Design Mastery Track
-- [ ] **Fundamentals** (Client-Server, DNS, HTTP/HTTPS) → [Topics/](SD/Topics/)
-- [ ] **Data Layer** (Databases, Caching, Storage) → [Performance/](SD/Performance/)
-- [ ] **Scalability** (Load Balancing, Horizontal/Vertical Scaling) → [Scripts/](SD/Scripts/)
-- [ ] **Reliability** (Replication, Backup, Disaster Recovery) → [Patterns/](SD/Patterns/)
-- [ ] **Performance** (CDN, Indexing, Optimization) → [Performance/](SD/Performance/)
-- [ ] **Communication** (APIs, Message Queues, WebSockets) → [Topics/](SD/Topics/)
-- [ ] **Security** (Authentication, Encryption, Rate Limiting) → [Security/](SD/Security/)
-- [ ] **Advanced Topics** (Event Sourcing, CQRS, Consensus) → [Advanced/](SD/Advanced/)
-
-### Interview Preparation Track
-- [ ] **Java Core & DSA** (50+ problems solved) → [Interview_Prep/Java_DSA/](Interview_Prep/Java_DSA/)
-- [ ] **Spring Boot Mastery** (Architecture, Deployment) → [Interview_Prep/SpringBoot/](Interview_Prep/SpringBoot/)
-- [ ] **Cloud Services** (AWS, Architecture patterns) → [Interview_Prep/Cloud_Services/](Interview_Prep/Cloud_Services/)
-- [ ] **Coding Challenges** (Easy → Medium → Hard) → [Interview_Prep/Coding_Challenges/](Interview_Prep/Coding_Challenges/)
-
-### Hands-on Implementation Track
-- [ ] **Basic Tools** (Rate limiter, Load balancer) → [Tools/](Tools/)
-- [ ] **Advanced Patterns** (Event sourcing, CQRS) → [Advanced/](SD/Advanced/)
-- [ ] **Assessment Challenges** (Progressive difficulty) → [Assessment/](Assessment/)
-- [ ] **Real-world Projects** (End-to-end implementations)
-
-## 🔗 Connect & Learn Together
-
-- 🌟 **Star** this repository to stay updated
-- 💬 **Discussions** for questions and knowledge sharing
-- 🐛 **Issues** for bug reports and feature requests
-- 📧 **Contact**: [Your Email/LinkedIn]
-
-## 📅 Daily Updates
+📅 Daily Updates
 
 This repository is actively maintained with new content added regularly. Subscribe to updates and join our growing community of system design enthusiasts!
 
