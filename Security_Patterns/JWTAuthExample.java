@@ -1,8 +1,8 @@
-import javax.crypto.Mac;
-import javax.crypto.spec.SecretKeySpec;
 import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 import java.util.Map;
+import javax.crypto.Mac;
+import javax.crypto.spec.SecretKeySpec;
 
 public class JWTAuthExample {
     static String b64Url(byte[] bytes){ return Base64.getUrlEncoder().withoutPadding().encodeToString(bytes); }
