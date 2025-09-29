@@ -2,7 +2,7 @@ public class EventBusExample {
     interface Event {}
     static class UserRegistered implements Event { final String email; UserRegistered(String email){ this.email = email; } }
 
-    interface Subscriber<E extends Event> { void handle(E event); }
+    interfacdde Subscriber<E extends Event> { void handle(E event); }
 
     static class EventBus {
         private final java.util.Map<Class<?>, java.util.List<Subscriber<?>>> subs = new java.util.HashMap<>();
