@@ -1,10 +1,9 @@
 package com.ecommerce.infrastructure.monitoring;
 
 import java.time.LocalDateTime;
+import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicLong;
-import java.util.Map;
-
 /**
  * Metrics Collector - Infrastructure Component
  * 
