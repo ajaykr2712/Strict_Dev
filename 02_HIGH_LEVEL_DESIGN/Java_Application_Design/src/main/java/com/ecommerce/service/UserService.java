@@ -1,147 +1,166 @@
 package com.ecommerce.service;
 
-import com.ecommerce.domain.User;
-import com.ecommerce.infrastructure.monitoring.MetricsCollector;
+import com.ecommerce.entity.User;
+import com.ecommerce.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
 import java.time.LocalDateTime;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.Map;
+import java.util.List;
+import java.util.Optional;
+import java.util.UUID;
 
 /**
- * User Service - Application Service Layer
+ * User Service - Spring Service Layer
  * 
  * Handles user management operations with:
- * - Caching for performance (simulated with in-memory cache)
- * - Metrics collection for monitoring
+ * - Spring Data JPA integration
+ * - Caching with Spring Cache abstraction
+ * - Transaction management
  * - Business logic orchestration
+ * 
+ * Features:
+ * - User registration and authentication
+ * - Profile management
+ * - Activity tracking
+ * - Performance optimization with caching
  */
+@Service
+@Transactional
 public class UserService {
-    private final MetricsCollector metricsCollector;
-    private final Map<String, User> userCache;
-    private final Map<String, User> userDatabase;
     
-    public UserService(MetricsCollector metricsCollector) {
-        this.metricsCollector = metricsCollector;
-        this.userCache = new ConcurrentHashMap<>();
-        this.userDatabase = new ConcurrentHashMap<>();
-    }
+    private final UserRepository userRepository;
     
-    public void initialize() {
-        System.out.println("UserService initialized");
+    @Autowired
+    public UserService(UserRepository userRepository) {
+        this.userRepository = userRepository;
     }
     
     /**
      * Register a new user
+     * 
+     * @param email User email address
+     * @param name User full name
+     * @return Created user entity
+     * @throws IllegalArgumentException if user already exists
      */
+    @Transactional
     public User registerUser(String email, String name) {
-        long startTime = System.currentTimeMillis();
-        
-        try {
-            // Check if user already exists
-            if (findUserByEmail(email) != null) {
-                throw new IllegalArgumentException("User with email " + email + " already exists");
-            }
-            
-            // Create new user
-            User user = new User(email, name);
-            
-            // Save to database (simulated)
-            userDatabase.put(user.getId(), user);
-            
-            // Update cache
-            userCache.put(user.getId(), user);
-            
-            // Record metrics
-            metricsCollector.recordMetric("user.registration.success", 1);
-            metricsCollector.recordLatency("user.registration.latency", 
-                                         System.currentTimeMillis() - startTime);
-            
-            System.out.println("User registered successfully: " + user.getEmail());
-            return user;
-            
-        } catch (Exception e) {
-            metricsCollector.recordMetric("user.registration.error", 1);
-            throw e;
+        // Check if user already exists
+        if (userRepository.existsByEmail(email)) {
+            throw new IllegalArgumentException("User with email " + email + " already exists");
         }
+        
+        // Create and save new user
+        User user = new User(email, name);
+        User savedUser = userRepository.save(user);
+        
+        System.out.println("User registered successfully: " + savedUser.getEmail());
+        return savedUser;
     }
     
     /**
      * Find user by ID with caching
+     * 
+     * @param userId User ID
+     * @return User entity if found
      */
-    public User findUserById(String userId) {
-        long startTime = System.currentTimeMillis();
-        
-        try {
-            // Try cache first
-            User user = userCache.get(userId);
-            if (user != null) {
-                metricsCollector.recordMetric("user.cache.hit", 1);
-                return user;
-            }
-            
-            // Cache miss - load from database
-            metricsCollector.recordMetric("user.cache.miss", 1);
-            user = userDatabase.get(userId);
-            
-            if (user != null) {
-                // Update cache
-                userCache.put(userId, user);
-            }
-            
-            metricsCollector.recordLatency("user.lookup.latency", 
-                                         System.currentTimeMillis() - startTime);
-            return user;
-            
-        } catch (Exception e) {
-            metricsCollector.recordMetric("user.lookup.error", 1);
-            throw e;
-        }
+    @Cacheable(value = "users", key = "#userId")
+    @Transactional(readOnly = true)
+    public Optional<User> findUserById(UUID userId) {
+        return userRepository.findById(userId);
     }
     
     /**
      * Find user by email
+     * 
+     * @param email User email address
+     * @return User entity if found
      */
-    public User findUserByEmail(String email) {
-        return userDatabase.values().stream()
-                .filter(user -> user.getEmail().equals(email))
-                .findFirst()
-                .orElse(null);
+    @Cacheable(value = "users", key = "#email")
+    @Transactional(readOnly = true)
+    public Optional<User> findUserByEmail(String email) {
+        return userRepository.findByEmail(email);
+    }
+    
+    /**
+     * Get all active users
+     * 
+     * @return List of active users
+     */
+    @Cacheable(value = "activeUsers")
+    @Transactional(readOnly = true)
+    public List<User> findAllActiveUsers() {
+        return userRepository.findByStatus(User.UserStatus.ACTIVE);
     }
     
     /**
      * Update user login timestamp
+     * 
+     * @param userId User ID
+     * @return Updated user entity
      */
-    public User updateLastLogin(String userId) {
-        User user = findUserById(userId);
-        if (user == null) {
-            throw new IllegalArgumentException("User not found: " + userId);
-        }
+    @CacheEvict(value = "users", key = "#userId")
+    @Transactional
+    public User updateLastLogin(UUID userId) {
+        User user = userRepository.findById(userId)
+                .orElseThrow(() -> new IllegalArgumentException("User not found: " + userId));
         
-        User updatedUser = user.withLastLogin(LocalDateTime.now());
-        
-        // Update database and cache
-        userDatabase.put(userId, updatedUser);
-        userCache.put(userId, updatedUser);
-        
-        metricsCollector.recordMetric("user.login.update", 1);
-        return updatedUser;
+        user.updateLastLogin();
+        return userRepository.save(user);
     }
     
     /**
      * Deactivate user account
+     * 
+     * @param userId User ID
+     * @return Updated user entity
      */
-    public User deactivateUser(String userId) {
-        User user = findUserById(userId);
-        if (user == null) {
-            throw new IllegalArgumentException("User not found: " + userId);
-        }
+    @CacheEvict(value = {"users", "activeUsers"}, key = "#userId")
+    @Transactional
+    public User deactivateUser(UUID userId) {
+        User user = userRepository.findById(userId)
+                .orElseThrow(() -> new IllegalArgumentException("User not found: " + userId));
         
-        User deactivatedUser = user.withStatus(User.UserStatus.INACTIVE);
-        
-        // Update database and cache
-        userDatabase.put(userId, deactivatedUser);
-        userCache.put(userId, deactivatedUser);
-        
-        metricsCollector.recordMetric("user.deactivation", 1);
-        return deactivatedUser;
+        user.deactivate();
+        return userRepository.save(user);
+    }
+    
+    /**
+     * Get user count by status
+     * 
+     * @param status User status
+     * @return Count of users with given status
+     */
+    @Transactional(readOnly = true)
+    public long getUserCountByStatus(User.UserStatus status) {
+        return userRepository.countByStatus(status);
+    }
+    
+    /**
+     * Find users with recent activity
+     * 
+     * @param since Date threshold for recent activity
+     * @return List of users with recent login activity
+     */
+    @Transactional(readOnly = true)
+    public List<User> findUsersWithRecentActivity(LocalDateTime since) {
+        return userRepository.findUsersWithRecentActivity(since);
+    }
+    
+    /**
+     * Check if user can place orders
+     * 
+     * @param userId User ID
+     * @return true if user can place orders
+     */
+    @Transactional(readOnly = true)
+    public boolean canUserPlaceOrders(UUID userId) {
+        return findUserById(userId)
+                .map(User::canPlaceOrder)
+                .orElse(false);
     }
 }
