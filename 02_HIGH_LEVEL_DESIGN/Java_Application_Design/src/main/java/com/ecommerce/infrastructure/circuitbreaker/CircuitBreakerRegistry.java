@@ -1,11 +1,10 @@
 package com.ecommerce.infrastructure.circuitbreaker;
 
-import java.time.LocalDateTime;
 import java.time.Duration;
+import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicLong;
-import java.util.Map;
 
 /**
  * Circuit Breaker Registry - Infrastructure Component
