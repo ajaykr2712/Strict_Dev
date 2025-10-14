@@ -45,6 +45,14 @@ A guide to the most important principles for building robust, scalable, and main
 
 ---
 
+## Advanced Topics
+- [Backend_Testing_Strategies.md](Backend_Testing_Strategies.md)
+- [Backend_CI_CD_DevOps.md](Backend_CI_CD_DevOps.md)
+- [Database_Design_Principles.md](Database_Design_Principles.md)
+- [Performance_Optimization_Backend.md](Performance_Optimization_Backend.md)
+- [Cloud_Native_Backend_Patterns.md](Cloud_Native_Backend_Patterns.md)
+- [Error_Handling_Resilience.md](Error_Handling_Resilience.md)
+
 ## See Also
 - [Backend_Security_Best_Practices.md](Backend_Security_Best_Practices.md)
 - [Backend_Scalability_Strategies.md](Backend_Scalability_Strategies.md)
