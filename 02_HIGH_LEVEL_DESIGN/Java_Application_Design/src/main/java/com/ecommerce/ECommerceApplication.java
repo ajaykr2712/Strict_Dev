@@ -31,7 +31,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableCaching
 @EnableAsync
 @EnableTransactionManagement
-public class ECommerceApplication {
+public class EcommerceApplication {
     
     /**
      * Main method - Application entry point
@@ -46,7 +46,7 @@ public class ECommerceApplication {
         System.out.println("Starting application...");
         System.out.println("========================================");
         
-        SpringApplication.run(ECommerceApplication.class, args);
+        SpringApplication.run(EcommerceApplication.class, args);
         
         System.out.println("Application started successfully!");
         System.out.println("Access the API documentation at: http://localhost:8080/swagger-ui.html");
