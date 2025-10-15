@@ -45,4 +45,20 @@ public class ProductService {
         current.updatePrice(newPrice);
         return repository.save(current);
     }
+
+    @Transactional
+    @CacheEvict(value = {"productById","allProducts"}, allEntries = true)
+    public Product updateStock(String id, int newStock) {
+        Product current = get(id);
+        current.updateStock(newStock);
+        return repository.save(current);
+    }
+
+    @Transactional
+    @CacheEvict(value = {"productById","allProducts"}, allEntries = true)
+    public Product updateStatus(String id, Product.ProductStatus status) {
+        Product current = get(id);
+        current.updateStatus(status);
+        return repository.save(current);
+    }
 }
