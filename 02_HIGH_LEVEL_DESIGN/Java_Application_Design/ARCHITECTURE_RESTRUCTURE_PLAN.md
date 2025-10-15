@@ -47,5 +47,18 @@ com.ecommerce
 - Add integration tests with Testcontainers (PostgreSQL)
 - Add GitHub Actions workflow (build + test)
 
+## Deprecated Legacy Models
+Legacy classes under `com.ecommerce.domain` are marked with `@Deprecated` in favor of JPA entities under `com.ecommerce.entity`.
+
+## Upcoming Refinements
+- Add Order/Payment DTOs & controllers
+- Introduce pagination & filtering (price range, category)
+- Add OpenTelemetry instrumentation stubs
+- Add integration tests with Testcontainers (PostgreSQL, Redis, Kafka)
+- Add GitHub Actions CI workflow (build, test, security scan)
+- Introduce MapStruct for mapper generation (optional)
+- Add Bean Validation annotations to request DTOs
+- Implement caching TTL strategy & eviction tests
+
 ## References
 See `Backend_Engineering_Principles.md` for principle alignment.
