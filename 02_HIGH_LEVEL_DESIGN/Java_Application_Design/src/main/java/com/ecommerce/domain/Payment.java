@@ -6,11 +6,9 @@ import java.util.Objects;
 import java.util.UUID;
 
 /**
- * Payment Domain Entity
- * 
- * Represents a payment transaction with strong consistency guarantees.
- * Implements financial domain patterns for reliability and auditability.
+ * @deprecated Use {@link com.ecommerce.entity.Payment} instead.
  */
+@Deprecated
 public class Payment {
     private final String id;
     private final String orderId;

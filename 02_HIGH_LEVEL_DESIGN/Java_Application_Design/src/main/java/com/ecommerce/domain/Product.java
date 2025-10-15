@@ -14,6 +14,7 @@ import java.util.UUID;
  * - Immutable design for reliability
  * - Rich domain model
  */
+@Deprecated // Use com.ecommerce.entity.Product instead
 public class Product {
     private final String id;
     private final String name;
