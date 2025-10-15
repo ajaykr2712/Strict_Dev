@@ -18,6 +18,7 @@ import java.util.UUID;
  * - Rich domain behavior for order processing
  * - Immutable design for data consistency
  */
+@Deprecated // Use com.ecommerce.entity.Order instead
 public class Order {
     private final String id;
     private final String userId;
