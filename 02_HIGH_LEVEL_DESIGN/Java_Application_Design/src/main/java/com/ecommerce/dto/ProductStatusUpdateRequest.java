@@ -1,7 +1,8 @@
 package com.ecommerce.dto;
 
-import jakarta.validation.constraints.*;
 import com.ecommerce.entity.Product;
+
+import jakarta.validation.constraints.NotNull;
 
 public record ProductStatusUpdateRequest(
         @NotNull Product.ProductStatus newStatus
