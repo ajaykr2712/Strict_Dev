@@ -1,3 +1,5 @@
+package unittests;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.After;
@@ -10,6 +12,10 @@ import static org.junit.Assert.*;
 
 /**
  * Unit tests for BulkheadIsolationExample
+ * Refactored: October 20, 2025
+ * 
+ * Tests the bulkhead pattern for isolating resource pools
+ * to prevent cascading failures in microservices architecture.
  * Tests the bulkhead pattern implementation for isolating resource pools
  * per dependency to prevent cascading failures.
  */
