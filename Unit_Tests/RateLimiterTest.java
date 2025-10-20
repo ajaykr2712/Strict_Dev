@@ -1,3 +1,5 @@
+package unittests;
+
 import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
@@ -8,6 +10,10 @@ import java.util.concurrent.atomic.AtomicInteger;
 /**
  * Unit tests for Rate Limiter
  * Tests token bucket algorithm and request throttling
+ * 
+ * @version 2.0
+ * @since 2024
+ * @refactored 2024-12-XX - Added package declaration for Maven/Gradle compatibility
  */
 public class RateLimiterTest {
 
