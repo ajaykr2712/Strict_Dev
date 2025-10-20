@@ -1,3 +1,5 @@
+package unittests;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -9,6 +11,10 @@ import static org.junit.Assert.*;
 
 /**
  * Unit tests for MetricsCollector
+ * Refactored: October 20, 2025
+ * 
+ * Tests metrics collection infrastructure for monitoring and observability,
+ * including counter metrics, latency tracking, and thread-safe operations.
  * Tests metrics collection infrastructure for monitoring and observability
  */
 public class MetricsCollectorTest {
