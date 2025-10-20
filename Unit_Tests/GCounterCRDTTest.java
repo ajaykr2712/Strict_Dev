@@ -1,3 +1,5 @@
+package unittests;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -8,6 +10,11 @@ import static org.junit.Assert.*;
 
 /**
  * Unit tests for CRDT_GCounterExample (Grow-only Counter)
+ * Refactored: October 20, 2025
+ * 
+ * Tests conflict-free replicated data type (CRDT) implementation
+ * verifying commutative, associative, and idempotent properties
+ * essential for distributed systems with eventual consistency.
  * Tests the conflict-free replicated data type implementation
  * for distributed counter scenarios.
  */
