@@ -1,12 +1,19 @@
+package unittests;
+
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.Map;
 import java.util.concurrent.*;
 
 import static org.junit.Assert.*;
 
 /**
  * Unit tests for CircuitBreakerRegistry
+ * Refactored: October 20, 2025
+ * 
+ * Tests infrastructure component for managing multiple circuit breakers
+ * ensuring fault tolerance and graceful degradation.
  * Tests the circuit breaker registry infrastructure component
  * for managing multiple circuit breakers and fault tolerance.
  */
