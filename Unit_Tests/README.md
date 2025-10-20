@@ -1,3 +1,26 @@
+# Unit Tests for Strict_Dev Java Codebase
+
+> **🔧 REFACTORING UPDATE (Oct 20, 2025)**: Maven/Gradle setup now available!  
+> See **REFACTORING_GUIDE.md** for modern build tool setup and dependency management.
+
+## Quick Start Options
+
+### Option 1: Maven (Recommended) ⭐
+```bash
+# Use the provided pom.xml in project root
+cd /Users/aponduga/Desktop/Personal/Strict_Dev
+mvn clean test
+```
+
+### Option 2: Manual Compilation
+```bash
+export CLASSPATH="lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar:Unit_Tests:."
+javac Unit_Tests/ProductServiceTest.java
+java org.junit.runner.JUnitCore ProductServiceTest
+```
+
+---
+
 /**
  * README for Unit Tests
  * 
